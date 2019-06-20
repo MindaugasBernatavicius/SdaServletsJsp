@@ -1,0 +1,255 @@
+<web-app metadata-complete="true">
+    <display-name>Archetype Created Web Application</display-name>
+
+    <!-- 0. Generic Servlet -->
+    <servlet>
+        <servlet-name>GenericServlet</servlet-name>
+        <servlet-class>cf.mindaugas.ex0_genericservlet.GenericServletDemo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GenericServlet</servlet-name>
+        <url-pattern>/generic_servlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 1. Hello Servlet -->
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>cf.mindaugas.ex1_helloservlet.HelloServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+    <!-- 2. Query string / UserInfo Servlet -->
+    <servlet>
+        <servlet-name>UserInfo</servlet-name>
+        <servlet-class>cf.mindaugas.ex2_querystring.UserInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserInfo</servlet-name>
+        <url-pattern>/userinfo</url-pattern>
+    </servlet-mapping>
+
+    <!-- 2. Form data / Registration Servlet -->
+    <servlet>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <servlet-class>cf.mindaugas.ex3_formdata.RegistrationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <!-- Session data BEGIN -->
+    <!-- X. Hidden Fields Initial Servlet -->
+    <servlet>
+        <servlet-name>HiddenFieldsInitial</servlet-name>
+        <servlet-class>cf.mindaugas.ex5_sessiondata.ex1_hiddenfields.HiddenFieldsInitial</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HiddenFieldsInitial</servlet-name>
+        <url-pattern>/HiddenFieldsInitial</url-pattern>
+    </servlet-mapping>
+
+    <!-- X. Hidden Fields Subsequent Servlet -->
+    <servlet>
+        <servlet-name>HiddenFieldsSubsequent</servlet-name>
+        <servlet-class>cf.mindaugas.ex5_sessiondata.ex1_hiddenfields.HiddenFieldsSubsequent</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HiddenFieldsSubsequent</servlet-name>
+        <url-pattern>/HiddenFieldsSubsequent</url-pattern>
+    </servlet-mapping>
+
+    <!-- X. URL Rewriting Initial Servlet -->
+    <servlet>
+        <servlet-name>URLRewritingInitial</servlet-name>
+        <servlet-class>cf.mindaugas.ex5_sessiondata.ex2_urlrewriting.URLRewritingInitial</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>URLRewritingInitial</servlet-name>
+        <url-pattern>/URLRewritingInitial</url-pattern>
+    </servlet-mapping>
+
+    <!-- X. URL Rewriting  Subsequent Servlet -->
+    <servlet>
+        <servlet-name>URLRewritingSubsequent</servlet-name>
+        <servlet-class>cf.mindaugas.ex5_sessiondata.ex2_urlrewriting.URLRewritingSubsequent</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>URLRewritingSubsequent</servlet-name>
+        <url-pattern>/URLRewritingSubsequent</url-pattern>
+    </servlet-mapping>
+
+    <!-- X. Cookies Initial Servlet -->
+    <servlet>
+        <servlet-name>CookiesInitial</servlet-name>
+        <servlet-class>cf.mindaugas.ex5_sessiondata.ex3_cookies.CookiesInitial</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CookiesInitial</servlet-name>
+        <url-pattern>/CookiesInitial</url-pattern>
+    </servlet-mapping>
+
+    <!-- X. Cookies Subsequent Servlet -->
+    <servlet>
+        <servlet-name>CookiesSubsequent</servlet-name>
+        <servlet-class>cf.mindaugas.ex5_sessiondata.ex3_cookies.CookiesSubsequent</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CookiesSubsequent</servlet-name>
+        <url-pattern>/CookiesSubsequent</url-pattern>
+    </servlet-mapping>
+
+    <!-- X. Cookies Final Servlet -->
+    <servlet>
+        <servlet-name>CookiesFinal</servlet-name>
+        <servlet-class>cf.mindaugas.ex5_sessiondata.ex3_cookies.CookiesFinal</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CookiesFinal</servlet-name>
+        <url-pattern>/CookiesFinal</url-pattern>
+    </servlet-mapping>
+
+    <!-- X. Session Initial Servlet -->
+    <servlet>
+        <servlet-name>SessionInitial</servlet-name>
+        <servlet-class>cf.mindaugas.ex5_sessiondata.ex4_session.SessionInitial</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionInitial</servlet-name>
+        <url-pattern>/SessionInitial</url-pattern>
+    </servlet-mapping>
+
+    <!-- X. Session Subsequent Servlet -->
+    <servlet>
+        <servlet-name>SessionSubsequent</servlet-name>
+        <servlet-class>cf.mindaugas.ex5_sessiondata.ex4_session.SessionSubsequent</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionSubsequent</servlet-name>
+        <url-pattern>/SessionSubsequent</url-pattern>
+    </servlet-mapping>
+
+    <!-- X. Session Final Servlet -->
+    <servlet>
+        <servlet-name>SessionFinal</servlet-name>
+        <servlet-class>cf.mindaugas.ex5_sessiondata.ex4_session.SessionFinal</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionFinal</servlet-name>
+        <url-pattern>/SessionFinal</url-pattern>
+    </servlet-mapping>
+    <!-- Session data END -->
+
+    <!-- X. File Upload Servlet -->
+    <servlet>
+        <servlet-name>FileUpload</servlet-name>
+        <servlet-class>cf.mindaugas.ex6_fileupload.FileUpload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FileUpload</servlet-name>
+        <url-pattern>/FileUpload</url-pattern>
+    </servlet-mapping>
+
+    <!-- X. Debugging Servlets w/ context logging Example -->
+    <servlet>
+        <servlet-name>ContextLog</servlet-name>
+        <servlet-class>cf.mindaugas.exA_debuggingservlets.ContextLog</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContextLog</servlet-name>
+        <url-pattern>/ContextLog</url-pattern>
+    </servlet-mapping>
+
+    <!-- X. Debugging Servlets Log4j Example -->
+    <servlet>
+        <servlet-name>DebuggingServletsLog4J</servlet-name>
+        <servlet-class>cf.mindaugas.exA_debuggingservlets.Log4jDemo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DebuggingServletsLog4J</servlet-name>
+        <url-pattern>/DebuggingServletsLog4J</url-pattern>
+    </servlet-mapping>
+
+    <context-param>
+        <param-name>connstr</param-name>
+        <param-value>server=homer;catalog=pubs;uid=sa;pwd=;</param-value>
+    </context-param>
+
+    <!-- X. Globalization Example -->
+    <servlet>
+        <servlet-name>DetectLocale</servlet-name>
+        <servlet-class>cf.mindaugas.exB_globalization.DetectLocale</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DetectLocale</servlet-name>
+        <url-pattern>/DetectLocale</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LanguageSettingsDemo</servlet-name>
+        <servlet-class>cf.mindaugas.exB_globalization.LanguageSettingsDemo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LanguageSettingsDemo</servlet-name>
+        <url-pattern>/LanguageSettingsDemo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LocaleSpecificDemo</servlet-name>
+        <servlet-class>cf.mindaugas.exB_globalization.LocaleSpecificDemo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LocaleSpecificDemo</servlet-name>
+        <url-pattern>/LocaleSpecificDemo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GlobalizedServletSearch</servlet-name>
+        <servlet-class>cf.mindaugas.exB_globalization.GlobalizedServletSearch</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GlobalizedServletSearch</servlet-name>
+        <url-pattern>/GlobalizedServletSearch</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- X. Servlet Initialization Example -->
+    <servlet>
+        <servlet-name>ServletInitialization</servlet-name>
+        <servlet-class>cf.mindaugas.annotations_13.ServletInitialization</servlet-class>
+        <init-param>
+            <param-name>connstr</param-name>
+            <param-value>server=https://localhost:1111/</param-value>
+        </init-param>
+        <!--<init-param>-->
+        <!--<param-name>use-cache</param-name>-->
+        <!--<param-value>TRUE</param-value>-->
+        <!--</init-param>-->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletInitialization</servlet-name>
+        <url-pattern>/ServletInitialization</url-pattern>
+    </servlet-mapping>
+
+    <!-- JSP examples -->
+    <servlet>
+        <servlet-name>Well</servlet-name>
+        <jsp-file>/ex1_jsp_builtins/index.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Well</servlet-name>
+        <url-pattern>/Well</url-pattern>
+    </servlet-mapping>
+
+    <context-param>
+        <param-name>dbUrl</param-name>
+        <param-value>jdbc://mysql</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbUser</param-name>
+        <param-value>rootDbUser</param-value>
+    </context-param>
+</web-app>
