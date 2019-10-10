@@ -1,8 +1,6 @@
 package cf.mindaugas.annotations_13;
 
-import javax.jws.soap.InitParam;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -11,14 +9,15 @@ import java.io.IOException;
 
 
 @WebServlet(
-    urlPatterns = {"*.dont", "*.do"},
-    name="SimpleServlet"
-    // initParams = {
-    //     @WebInitParam(
-    //         name = "ProductName",
-    //         value = "Welcome Application From Annotation"
-    //     )
-    // }
+    urlPatterns = {"/QuickServlet"}
+    // urlPatterns = {"*.dont", "*.do"}
+//     name="SimpleServlet"
+//     // initParams = {
+//     //     @WebInitParam(
+//     //         name = "ProductName",
+//     //         value = "Welcome Application From Annotation"
+//     //     )
+//     // }
 )
 public class ServletInitialization extends HttpServlet {
     String appName = "My Application";

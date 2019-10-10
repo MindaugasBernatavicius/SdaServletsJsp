@@ -22,14 +22,15 @@ public class HiddenFieldsInitial extends HttpServlet {
 		out.println("<body>");
 		out.println("<h3>Welcome " + guestName + "</h3>");
 		out.println("<form name='frm' action='HiddenFieldsSubsequent' method='post'>");
+
+		// the important line is here !
 		out.println("<input type='hidden' name='guestName' value='" + guestName +"'/>");
+
 		out.println("<p>Enter Email Id : </p>");
 		out.println("<p><input type='email' name='email' /> </p>");
 		out.println("<p><input type='submit' value='Submit guest' name='btnPreview' /> </p>");
 		out.println("</form>");
 		out.println("</body>");
 		out.println("</html>");
-		
 	}
-
 }

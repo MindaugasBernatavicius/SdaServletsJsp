@@ -30,7 +30,5 @@ public class SessionInitial extends HttpServlet {
 
 		out.println("</body>");
 		out.println("</html>");
-
 	}
-
 }

@@ -20,7 +20,7 @@ public class URLRewritingInitial extends HttpServlet {
 		out.println("</head>");
 		out.println("<body>");
 		String queryString = "guestName=" + guestName + "&email=" + email;
-		out.println("<a href='URLRewritingSubsequent?" + queryString + "'>CookiesSubsequent Data </a> &nbsp;"
+		out.println("<a href='URLRewritingSubsequent?" + queryString + "'>Display Data </a> &nbsp;"
 				+ "<a href='SaveData?" + queryString + "'>Save Data </a>");
 		out.println("</body>");
 		out.println("</html>");

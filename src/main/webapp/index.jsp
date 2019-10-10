@@ -18,6 +18,9 @@
         <!-- <a href="/userinfo?firstName=Mindaugas&lastName=Bernatavi%C4%8Dius">Click here for /userinfo?firstName=Mindaugas&lastName=Bernatavi&#x10D;ius</a><br><br> -->
         <a href="/userinfo?firstName=Mindaugas&lastName=Bernatavi%C4%8Dius">Click here for /userinfo?firstName=Mindaugas&lastName=Bernatavi&#x10D;ius</a><br><br>
 
+        <h3>Servlet Filters :</h3>
+        <a href="/exX_servletfilters/login.html">Click here to open a login form</a><br><br>
+
         <h3>Regitration servlet example showing form data example:</h3>
         <a href="/registration/register.jsp">Click here to register</a><br><br>
 

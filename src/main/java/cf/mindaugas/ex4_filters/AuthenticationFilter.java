@@ -1,16 +1,9 @@
 package cf.mindaugas.ex4_filters;
 
+import javax.servlet.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
-
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.FilterConfig;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.annotation.WebFilter;
 
 
 public class AuthenticationFilter implements Filter {
@@ -22,16 +15,18 @@ public class AuthenticationFilter implements Filter {
 		String passwd  = request.getParameter("passwd");
 		
 		String ipAddress = request.getRemoteAddr();
-		
-		if( userName.equals("psuser") && passwd.equals("psguest")){
-			System.out.println("User logged in " + ipAddress + " at " + new Date().toString());
-			chain.doFilter(request, response);
+
+		if(userName != null || passwd != null){
+			if(userName.equals("m") && passwd.equals("b")){
+				System.out.println("User logged in " + ipAddress + " at " + new Date().toString());
+				chain.doFilter(request, response);
+			} else{
+				PrintWriter out = response.getWriter();
+				out.println("<body><h3>Sorry, You are not authorized to access this resource. </h3></body>");
+			}
+		} else {
+			response.getWriter().println("<body><h3>Sorry, You are not authorized to access this resource. </h3></body>");
 		}
-		else{
-			PrintWriter out = response.getWriter();
-			out.println("<h3>Sorry, You are not authorized to access this resource. </h3>");
-		}
-		
 	}
 
 	public void init(FilterConfig fConfig) throws ServletException {

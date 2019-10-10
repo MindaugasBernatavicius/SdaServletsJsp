@@ -7,8 +7,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URLDecoder;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.util.Enumeration;
 import java.util.Map;
 import java.util.Set;
@@ -53,6 +51,7 @@ public class UserInfo extends HttpServlet {
         out.println("<p>Last Name : " + escapeHTML(lastName) + "</p>");
         out.println("</div>");
 
+
         out.println("<h3>Reading QueryString data using 'Enumeration getParameterNames()' method : </h3>");
         Enumeration<String> paramNames = request.getParameterNames();
         out.println( "<div>");
@@ -62,8 +61,10 @@ public class UserInfo extends HttpServlet {
             out.println( "<p>" + paramName + " : " +  paramValue + "</p>");
         }
         out.println( "</div>");
-        out.println("<h3>Read QueryString data using 'Map getParameterMap()' method </h3>");
 
+
+        out.println("<h3>Read QueryString data using 'Map getParameterMap()' method </h3>");
+        // Why string[] ??? because we can handle multiples of the same parameter name=aaaa&name=bbbb
         Map<String, String[]> paramMap = request.getParameterMap();
         Set<String> paramNamesSet = paramMap.keySet();
         out.println( "<div>");

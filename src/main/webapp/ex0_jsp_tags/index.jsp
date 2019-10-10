@@ -30,12 +30,12 @@
 
 
             <!-- 2. Scriptlet Tag -->
-            <% for(int i = 1; i <= 5; i++){
+            <% for(int i = 1; i <= 10; i++){
                 out.println(i + "<br/>");
             } %>
             <!-- Excercise -->
 
-            <!-- 3. @Page directive -->
+            <!-- 3. Calendar comes from @Page directive above -->
             <p>Copyright &copy; Mindaugas Corp. <%= Calendar.getInstance().get(Calendar.YEAR) %></p>
 
             <!-- 4. @Include directive -->

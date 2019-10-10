@@ -1,4 +1,5 @@
-<web-app metadata-complete="true">
+<web-app
+    metadata-complete="false"> <!-- needs to be false for anotations to work -->
     <display-name>Archetype Created Web Application</display-name>
 
     <!-- 0. Generic Servlet -->
@@ -40,6 +41,42 @@
         <servlet-name>RegistrationServlet</servlet-name>
         <url-pattern>/register</url-pattern>
     </servlet-mapping>
+
+    <!-- X. Handling HTTP requests and responses -->
+    <!-- TBD -->
+
+    <!-- X. Servlet Filters -->
+
+    <!-- Change the order and you will see that the request to secured servlet will not be measured if the user does not have correct credentials -->
+    <filter>
+        <filter-name>PerfFilter</filter-name>
+        <filter-class>cf.mindaugas.ex4_filters.PerformanceFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>PerfFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>cf.mindaugas.ex4_filters.AuthenticationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/SecuredServlet</url-pattern>
+        <url-pattern>/HiddenFieldsInitial</url-pattern>
+    </filter-mapping>
+
+
+    <servlet>
+        <servlet-name>SecuredServlet</servlet-name>
+        <servlet-class>cf.mindaugas.ex4_filters.SecuredServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SecuredServlet</servlet-name>
+        <url-pattern>/SecuredServlet</url-pattern>
+    </servlet-mapping>
+
 
     <!-- Session data BEGIN -->
     <!-- X. Hidden Fields Initial Servlet -->
@@ -217,22 +254,22 @@
 
 
     <!-- X. Servlet Initialization Example -->
-    <servlet>
-        <servlet-name>ServletInitialization</servlet-name>
-        <servlet-class>cf.mindaugas.annotations_13.ServletInitialization</servlet-class>
-        <init-param>
-            <param-name>connstr</param-name>
-            <param-value>server=https://localhost:1111/</param-value>
-        </init-param>
+    <!--<servlet>-->
+        <!--<servlet-name>ServletInitialization</servlet-name>-->
+        <!--<servlet-class>cf.mindaugas.annotations_13.ServletInitialization</servlet-class>-->
         <!--<init-param>-->
-        <!--<param-name>use-cache</param-name>-->
-        <!--<param-value>TRUE</param-value>-->
+            <!--<param-name>connstr</param-name>-->
+            <!--<param-value>server=https://localhost:1111/</param-value>-->
         <!--</init-param>-->
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ServletInitialization</servlet-name>
-        <url-pattern>/ServletInitialization</url-pattern>
-    </servlet-mapping>
+        <!--&lt;!&ndash;<init-param>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-name>use-cache</param-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;<param-value>TRUE</param-value>&ndash;&gt;-->
+        <!--&lt;!&ndash;</init-param>&ndash;&gt;-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>ServletInitialization</servlet-name>-->
+        <!--<url-pattern>/ServletInitialization</url-pattern>-->
+    <!--</servlet-mapping>-->
 
     <!-- JSP examples -->
     <servlet>
@@ -252,4 +289,9 @@
         <param-name>dbUser</param-name>
         <param-value>rootDbUser</param-value>
     </context-param>
+
+    <!--<error-page>-->
+        <!--<error-code>404</error-code>-->
+        <!--<location>/ex2_jsp_errorhandling/404.jsp</location>-->
+    <!--</error-page>-->
 </web-app>
