@@ -63,7 +63,7 @@
     </dependencies>
 
     <build>
-        <finalName>mywebapp</finalName>
+        <finalName>SdaServletsJsp</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>

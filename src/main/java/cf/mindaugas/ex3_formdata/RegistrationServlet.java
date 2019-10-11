@@ -1,5 +1,8 @@
 package cf.mindaugas.ex3_formdata;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,7 +19,6 @@ public class RegistrationServlet extends HttpServlet {
         String[] hobbies = req.getParameterValues("hobbies");
         String country = req.getParameter("country");
         String[] languages= req.getParameterValues("languages");
-
 
         res.setContentType("text/html");
         PrintWriter out = res.getWriter();
