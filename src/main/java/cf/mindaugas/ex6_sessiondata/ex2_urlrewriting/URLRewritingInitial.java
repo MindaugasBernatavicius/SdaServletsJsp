@@ -24,8 +24,5 @@ public class URLRewritingInitial extends HttpServlet {
 				+ "<a href='SaveData?" + queryString + "'>Save Data </a>");
 		out.println("</body>");
 		out.println("</html>");
-
-
 	}
-
 }

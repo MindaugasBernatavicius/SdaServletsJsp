@@ -2,6 +2,16 @@
     <head>
         <meta charset="ISO-8859-1">
         <title>Registration Form</title>
+        <script>
+            <%-- EXCERCISE :: more complete, better validation --%>
+            function validateForm() {
+                var password = document.forms["f1"]["passwd"].value;
+                if (password  == "") {
+                    alert("Password must be entered!");
+                    return false;
+                }
+            }
+        </script>
     </head>
     <body>
         <h3>Registration Form</h3>

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TestBean {
-    private String message = "No message specified";
+    private String message = "Message from the bean";
     private List<String> someCollection;
 
     public String getMessage() {

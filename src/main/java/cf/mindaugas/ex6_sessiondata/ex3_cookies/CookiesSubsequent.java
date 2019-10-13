@@ -37,7 +37,6 @@ public class CookiesSubsequent extends HttpServlet {
 		out.println("<form name='frm' action='CookiesFinal' method='post'>");
 		out.println("<p><input type='submit' value='Save Data' name='btnSave' />");
 		out.println("</form>");
-
 		out.println("</body>");
 		out.println("</html>");
 	}

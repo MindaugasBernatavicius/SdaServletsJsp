@@ -61,7 +61,8 @@
     <filter-mapping>
         <filter-name>AuthFilter</filter-name>
         <url-pattern>/SecuredServlet</url-pattern>
-        <!--<url-pattern>/HiddenFieldsInitial</url-pattern>-->
+        <!-- Toggle the comment to see an additional URL protected by this filter -->
+        <url-pattern>/ShowRequestHeaders</url-pattern>
     </filter-mapping>
 
     <servlet>
@@ -76,7 +77,7 @@
     <!-- 5. Headers and status code, uses annotations  -->
 
     <!-- Session data BEGIN -->
-    <!-- 6. Hidden Fields Initial Servlet -->
+    <!-- 6.1 Hidden Fields Initial Servlet -->
     <servlet>
         <servlet-name>HiddenFieldsInitial</servlet-name>
         <servlet-class>cf.mindaugas.ex6_sessiondata.ex1_hiddenfields.HiddenFieldsInitial</servlet-class>
@@ -86,7 +87,7 @@
         <url-pattern>/HiddenFieldsInitial</url-pattern>
     </servlet-mapping>
 
-    <!-- X. Hidden Fields Subsequent Servlet -->
+    <!-- 6.2 Hidden Fields Subsequent Servlet -->
     <servlet>
         <servlet-name>HiddenFieldsSubsequent</servlet-name>
         <servlet-class>cf.mindaugas.ex6_sessiondata.ex1_hiddenfields.HiddenFieldsSubsequent</servlet-class>
@@ -96,7 +97,7 @@
         <url-pattern>/HiddenFieldsSubsequent</url-pattern>
     </servlet-mapping>
 
-    <!-- X. URL Rewriting Initial Servlet -->
+    <!-- 6.3 URL Rewriting Initial Servlet -->
     <servlet>
         <servlet-name>URLRewritingInitial</servlet-name>
         <servlet-class>cf.mindaugas.ex6_sessiondata.ex2_urlrewriting.URLRewritingInitial</servlet-class>
@@ -106,7 +107,7 @@
         <url-pattern>/URLRewritingInitial</url-pattern>
     </servlet-mapping>
 
-    <!-- X. URL Rewriting  Subsequent Servlet -->
+    <!-- 6.4 URL Rewriting  Subsequent Servlet -->
     <servlet>
         <servlet-name>URLRewritingSubsequent</servlet-name>
         <servlet-class>cf.mindaugas.ex6_sessiondata.ex2_urlrewriting.URLRewritingSubsequent</servlet-class>
@@ -116,7 +117,7 @@
         <url-pattern>/URLRewritingSubsequent</url-pattern>
     </servlet-mapping>
 
-    <!-- X. Cookies Initial Servlet -->
+    <!-- 6.5 Cookies Initial Servlet -->
     <servlet>
         <servlet-name>CookiesInitial</servlet-name>
         <servlet-class>cf.mindaugas.ex6_sessiondata.ex3_cookies.CookiesInitial</servlet-class>
@@ -126,7 +127,7 @@
         <url-pattern>/CookiesInitial</url-pattern>
     </servlet-mapping>
 
-    <!-- X. Cookies Subsequent Servlet -->
+    <!-- 6.6 Cookies Subsequent Servlet -->
     <servlet>
         <servlet-name>CookiesSubsequent</servlet-name>
         <servlet-class>cf.mindaugas.ex6_sessiondata.ex3_cookies.CookiesSubsequent</servlet-class>
@@ -136,7 +137,7 @@
         <url-pattern>/CookiesSubsequent</url-pattern>
     </servlet-mapping>
 
-    <!-- X. Cookies Final Servlet -->
+    <!-- 6.7 Cookies Final Servlet -->
     <servlet>
         <servlet-name>CookiesFinal</servlet-name>
         <servlet-class>cf.mindaugas.ex6_sessiondata.ex3_cookies.CookiesFinal</servlet-class>
@@ -146,7 +147,7 @@
         <url-pattern>/CookiesFinal</url-pattern>
     </servlet-mapping>
 
-    <!-- X. Session Initial Servlet -->
+    <!-- 6.8 Session Initial Servlet -->
     <servlet>
         <servlet-name>SessionInitial</servlet-name>
         <servlet-class>cf.mindaugas.ex6_sessiondata.ex4_session.SessionInitial</servlet-class>
@@ -156,7 +157,7 @@
         <url-pattern>/SessionInitial</url-pattern>
     </servlet-mapping>
 
-    <!-- X. Session Subsequent Servlet -->
+    <!-- 6.9 Session Subsequent Servlet -->
     <servlet>
         <servlet-name>SessionSubsequent</servlet-name>
         <servlet-class>cf.mindaugas.ex6_sessiondata.ex4_session.SessionSubsequent</servlet-class>
@@ -166,7 +167,7 @@
         <url-pattern>/SessionSubsequent</url-pattern>
     </servlet-mapping>
 
-    <!-- X. Session Final Servlet -->
+    <!-- 6.10 Session Final Servlet -->
     <servlet>
         <servlet-name>SessionFinal</servlet-name>
         <servlet-class>cf.mindaugas.ex6_sessiondata.ex4_session.SessionFinal</servlet-class>
@@ -278,15 +279,19 @@
         <url-pattern>/ErrorHandlerServet</url-pattern>
     </servlet-mapping>
 
-    <error-page>
-        <error-code>404</error-code>
-        <location>/ErrorHandlerServet</location>
-    </error-page>
+    <!--<error-page>-->
+    <!--    <error-code>404</error-code>-->
+    <!--    <location>/ErrorHandlerServet</location>-->
+    <!--</error-page>-->
 
     <!-- JSP examples -->
+
+    <!-- Ex 0. All self contained -->
+
+    <!-- Ex 1. Getting the servlet name from JSP -->
     <servlet>
         <servlet-name>Well</servlet-name>
-        <jsp-file>/ex1_jsp_builtins/index.jsp</jsp-file>
+        <jsp-file>/jsp_examples/ex1_jsp_builtins/index.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
         <servlet-name>Well</servlet-name>
@@ -302,8 +307,9 @@
         <param-value>rootDbUser</param-value>
     </context-param>
 
-    <!--<error-page>-->
-        <!--<error-code>404</error-code>-->
-        <!--<location>/ex2_jsp_errorhandling/404.jsp</location>-->
-    <!--</error-page>-->
+    <!-- Ex 2. Error handling -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/ex2_jsp_errorhandling/404.jsp</location>
+    </error-page>
 </web-app>

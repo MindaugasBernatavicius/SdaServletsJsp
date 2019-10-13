@@ -18,6 +18,5 @@ public class SecuredServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
 		out.println("<h1>Welcome to Secured Servlet Application </h3>");
-
 	}
 }

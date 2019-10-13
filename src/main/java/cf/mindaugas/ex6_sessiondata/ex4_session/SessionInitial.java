@@ -27,7 +27,6 @@ public class SessionInitial extends HttpServlet {
 		out.println("<p><input type='email' name='email' /> </p>");
 		out.println("<p><input type='submit' value='Show Preview' name='btnPreview' /> </p>");
 		out.println("</form>");
-
 		out.println("</body>");
 		out.println("</html>");
 	}

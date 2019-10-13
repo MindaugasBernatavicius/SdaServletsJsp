@@ -13,6 +13,13 @@ public class CookiesInitial extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String guestName = request.getParameter("guestName");
+
+		Cookie userData[] = request.getCookies();
+		for (Cookie cookie : userData){
+			System.out.println("Cookie name: " + cookie.getName());
+			System.out.println("Cookie value: " + cookie.getValue());
+		}
+
 		Cookie guestData = new Cookie("guestName",guestName);
 		//guestData.setMaxAge(1800);
 		response.addCookie(guestData);
@@ -29,7 +36,6 @@ public class CookiesInitial extends HttpServlet {
 		out.println("<p><input type='email' name='email' /> </p>");
 		out.println("<p><input type='submit' value='Preview data' name='btnPreview' /> </p>");
 		out.println("</form>");
-
 		out.println("</body>");
 		out.println("</html>");
 	}

@@ -66,8 +66,36 @@
         <hr>
         <h2>JSP examples:</h2><hr/>
 
-        <h3>[Ex 0]: JSP tags:</h3>
-        <a href="/ex0_jsp_tags">Click here</a><br><br>
+        <h3>[Ex 0]: JSP tags</h3>
+        <a href="/jsp_examples/ex0_jsp_tags">Click here</a><br><br>
+
+        <h3>[Ex 1]: JSP builtin objects</h3>
+        <a href="/jsp_examples/ex1_jsp_builtins">Click here to see the builtin example</a><br><br>
+        <a href="/Well">Click here to open the same JSP page as servlet</a><br><br>
+
+        <h3>[Ex 2]: JSP hanling errors</h3>
+        <a href="/jsp_examples/ex2_jsp_errorhandling">Click here to see a custom error page</a><br><br>
+
+        <h3>[Ex 3]: JSP action tags</h3>
+        <a href="/jsp_examples/ex3_jsp_actions">Click here</a><br><br>
+
+        <h3>[Ex 4]: JSP expression language - EL</h3>
+        <a href="/jsp_examples/ex4_jsp_el">Click here</a><br><br>
+
+        <h3>[Ex 5]: JSTL - standard tag library</h3>
+        <a href="/jsp_examples/ex5_jsp_jstl">Click here</a><br><br>
+
+        <h3>[Ex 6]: Custom tag library</h3>
+        <a href="/jsp_examples/ex6_jsp_customtaglib">Click here</a><br><br>
+
+        <hr>
+        <h2>MVC app:</h2><hr/>
+
+        <h3>JSP</h3>
+        <a href="/exZ_mvcproject/student-record.jsp">Click here</a><br><br>
+
+        <h3>Servlet</h3>
+        <a href="/student-record?id=1">Click here</a><br><br>
 
     </body>
 </html>

@@ -17,8 +17,8 @@
             <h2><% out.print(title); %></h2>
         </center>
         <div align = "center">
-            <p>Using param: http://localhost:8888/ex4_jsp_el/?username=${param["username"]}</p>
-            <p>The entire query string: http://localhost:8888/ex4_jsp_el/?${pageContext.request.queryString}</p>
+            <p>Using param: http://localhost:8888/jsp_examples/ex4_jsp_el?username=${param["username"]}</p>
+            <p>The entire query string: http://localhost:8888/jsp_examples/ex4_jsp_el?${pageContext.request.queryString}</p>
         </div>
         <hr>
 
